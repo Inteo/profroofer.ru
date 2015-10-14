@@ -1,6 +1,6 @@
 
 $(document).ready(function(){
-	$(".modal-inline").fancybox({
+	/*$(".modal-inline").fancybox({
     type: 'inline',
     fixed:false,
     title: '',
@@ -17,7 +17,8 @@ $(document).ready(function(){
         fixed: false
       }
     }
-  });
+  });*/
+  $('#city').multiselect();
 });
 $(function(){
 	

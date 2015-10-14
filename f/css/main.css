@@ -198,10 +198,11 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: "Droid Serif", sans-serif;
+  font-family: "PT Sans", sans-serif;
   font-size: 14px;
-  line-height: 24px;
-  color: #292929;
+  line-height: 18px;
+  color: #090405;
+  letter-spacing: -0.025em;
 }
 input,
 button,
@@ -212,11 +213,10 @@ textarea {
   line-height: inherit;
 }
 a {
-  /*  color: @blue;
- &:hover {
-   color: @orange !important;
- } */
   text-decoration: none;
+}
+a:hover {
+  color: #ff3d32 !important;
 }
 a:hover,
 a:focus {
@@ -614,10 +614,10 @@ input[type='checkbox']:checked + label::after {
 .btn,
 .btn:active {
   display: inline-block;
-  font: bold 16px 'Proxima Nova', sans-serif;
   padding: 17px 65px;
   margin-bottom: 0;
-  line-height: 25px;
+  line-height: 18px;
+  font-weight: bold;
   color: #fff;
   text-align: center;
   position: relative;
@@ -630,7 +630,6 @@ input[type='checkbox']:checked + label::after {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  border-radius: 5px;
   -webkit-box-shadow: 0 -3px 0 0 #df2b14 inset;
   -moz-box-shadow: 0 -3px 0 0 #df2b14 inset;
   box-shadow: 0 -3px 0 0 #df2b14 inset;
@@ -760,14 +759,6 @@ fieldset[disabled] .btn-link:focus {
   font-size: 14px;
   text-align: left;
   list-style: none;
-  background-color: #fff;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
-  border: 1px solid #ccc;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
 }
 .dropdown-menu.pull-right {
   right: 0;
@@ -790,17 +781,17 @@ fieldset[disabled] .btn-link:focus {
 }
 .dropdown-menu > li > a:hover,
 .dropdown-menu > li > a:focus {
-  color: #262626;
+  /* color: #262626;
   text-decoration: none;
-  background-color: #f5f5f5;
+  background-color: #f5f5f5; */
 }
 .dropdown-menu > .active > a,
 .dropdown-menu > .active > a:hover,
 .dropdown-menu > .active > a:focus {
-  color: #fff;
+  /* color: #fff;
   text-decoration: none;
   background-color: #337ab7;
-  outline: 0;
+  outline: 0; */
 }
 .dropdown-menu > .disabled > a,
 .dropdown-menu > .disabled > a:hover,
@@ -3852,7 +3843,7 @@ textarea {
   height: 100%;
   margin: 0 0 -500px 0;
   padding: 0;
-  min-width: 1000px;
+  min-width: 1024px;
   overflow: hidden;
 }
 .wrap:after {
@@ -3877,8 +3868,210 @@ textarea {
   text-align: center;
 }
 .holder {
-  max-width: 1000px;
-  padding: 0 30px;
+  max-width: 1024px;
+  padding: 0 22px;
   margin: 0 auto;
   position: relative;
+}
+.header__limiter {
+  float: left;
+  width: 383px;
+}
+.header__content {
+  overflow: hidden;
+  line-height: 18px;
+  text-align: right;
+}
+.header__control {
+  height: 40px;
+  background: #191414;
+}
+.header__main {
+  padding: 40px 0;
+  line-height: 61px;
+}
+.header__main .header__content {
+  line-height: 58px;
+}
+.header__menu {
+  list-style: none;
+  margin-bottom: 0;
+  text-align: justify;
+  padding-right: 10px;
+}
+.header__menu:after {
+  display: inline-block;
+  vertical-align: top;
+  content: '';
+  width: 100%;
+}
+.header__menu li {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 38px;
+  max-height: 40px;
+}
+.header__menu li a {
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+}
+.header__description {
+  float: left;
+}
+.header__description p {
+  color: #4f4f4f;
+  font-style: italic;
+  line-height: 18px;
+  letter-spacing: .05em;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: left;
+}
+.header__phone {
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: .01em;
+  display: inline-block;
+  vertical-align: middle;
+}
+.city-switch {
+  position: relative;
+  margin-left: -22px;
+}
+.city-switch .btn {
+  background: #191414;
+  border: none;
+  box-shadow: none;
+  color: #fff;
+  font-size: 14px;
+  line-height: 40px;
+  min-height: 40px;
+  letter-spacing: .1em;
+  padding: 0 22px 0 54px;
+  text-align: left;
+}
+.city-switch .btn span {
+  border-bottom: 2px dotted #ff3d32;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 18px;
+  margin-top: -5px;
+}
+.city-switch .btn:before {
+  content: '';
+  background: url(../../f/i/icons.png);
+  width: 15px;
+  height: 18px;
+  position: absolute;
+  left: 22px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+}
+.city-switch .btn:active {
+  border-radius: none;
+  top: 0;
+  background: #191414;
+}
+.city-switch .open .btn {
+  background: #251f1f;
+  min-width: 235px;
+}
+.city-switch .caret {
+  display: none;
+}
+.city-switch .dropdown-menu {
+  background: #251f1f;
+  left: 0;
+  top: 100%;
+  min-width: 100%;
+  padding: 0;
+  margin: 0;
+  border: none;
+  box-shadow: none;
+}
+.city-switch .dropdown-menu li {
+  border-bottom: 1px solid #2e2828;
+  position: relative;
+}
+.city-switch .dropdown-menu li:before {
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #191414;
+}
+.city-switch .dropdown-menu li:last-child {
+  border-bottom: none;
+}
+.city-switch .dropdown-menu li:last-child:before {
+  display: none;
+}
+.city-switch .dropdown-menu li a {
+  display: block;
+  padding: 0;
+  line-height: 55px;
+}
+.city-switch .dropdown-menu li a .radio {
+  padding-left: 54px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: .1em;
+  display: block;
+  line-height: 55px;
+}
+.city-switch .dropdown-menu li a .radio input {
+  display: none;
+}
+.city-switch .dropdown-menu li a:hover {
+  background: #191414;
+}
+.city-switch .dropdown-menu li a:hover .radio {
+  color: #fff;
+}
+.city-switch .dropdown-menu li.active a {
+  background: #191414;
+}
+.city-switch .dropdown-menu li.active a .radio {
+  color: #ff3d32;
+}
+.logo {
+  padding-left: 105px;
+  padding-right: 50px;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: -5px;
+}
+.logo:before {
+  position: absolute;
+  right: 0;
+  top: 20px;
+  bottom: 10px;
+  width: 1px;
+  background: #e7e5e6;
+  content: '';
+}
+.logo a span {
+  font-size: 20px;
+  line-height: 24px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  color: #090405;
+  font-weight: bold;
+  letter-spacing: .01em;
+}
+.logo a span:before {
+  content: '';
+  position: absolute;
+  left: -105px;
+  top: -5px;
+  width: 88px;
+  height: 61px;
+  background: url(../../f/i/icons.png) -15px 0;
 }
