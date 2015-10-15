@@ -352,11 +352,12 @@ h6,
   font-size: 12px;
 }
 h1 {
-  font-size: 35px;
-  line-height: 40px;
-  color: #fff;
-  margin-bottom: 50px;
+  font-size: 100px;
+  line-height: 80px;
+  color: #090405;
   letter-spacing: -0.025em;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 p {
   margin: 0;
@@ -614,10 +615,11 @@ input[type='checkbox']:checked + label::after {
 .btn,
 .btn:active {
   display: inline-block;
-  padding: 17px 65px;
+  padding: 10px 25px 12px;
   margin-bottom: 0;
   line-height: 18px;
   font-weight: bold;
+  letter-spacing: .01em;
   color: #fff;
   text-align: center;
   position: relative;
@@ -630,16 +632,14 @@ input[type='checkbox']:checked + label::after {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  -webkit-box-shadow: 0 -3px 0 0 #df2b14 inset;
-  -moz-box-shadow: 0 -3px 0 0 #df2b14 inset;
-  box-shadow: 0 -3px 0 0 #df2b14 inset;
+  background: #ff3d32;
   overflow: hidden;
   z-index: 1;
 }
 .btn:hover,
 .btn:active:hover {
   color: #fff !important;
-  background: #ff563e;
+  background: #ff584f;
 }
 .btn:focus,
 .btn:active:focus {
@@ -652,6 +652,7 @@ input[type='checkbox']:checked + label::after {
   -moz-box-shadow: none;
   box-shadow: none;
   top: 2px;
+  background: #e01f16;
 }
 .btn_big,
 .btn_big:active {
@@ -3798,6 +3799,11 @@ input:-moz-placeholder {
 textarea {
   min-height: 120px;
 }
+.input {
+  border: none;
+  border-bottom: 1px solid #dadada;
+  padding: 10px 0;
+}
 .fancybox-skin {
   border-radius: none;
   background: none;
@@ -3841,25 +3847,104 @@ textarea {
   min-height: 100%;
   height: auto !important;
   height: 100%;
-  margin: 0 0 -500px 0;
+  margin: 0 0 -306px 0;
   padding: 0;
   min-width: 1024px;
   overflow: hidden;
 }
 .wrap:after {
   content: '';
-  height: 500px;
+  height: 306px;
   margin: 0;
   padding: 0;
 }
 .subsection {
-  padding: 45px 0;
+  padding: 70px 0;
+}
+.half {
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+  position: relative;
+  padding-right: 20px;
+}
+.half:nth-child(even) {
+  padding-right: 0;
+  padding-left: 20px;
+}
+.half_rev:nth-child(even) {
+  padding-right: 20px;
+  padding-left: 0;
+}
+.half_rev:nth-child(odd) {
+  padding-right: 0;
+  padding-left: 20px;
 }
 .footer {
-  min-height: 500px;
+  min-height: 306px;
   margin: 0;
   padding: 0;
   min-width: 980px;
+  background: #090405;
+}
+.footer__holder {
+  padding: 80px 0;
+}
+.footer__main {
+  margin-bottom: 50px;
+}
+.footer__link {
+  line-height: 20px;
+  margin-bottom: 20px;
+}
+.footer__link a {
+  color: #fff;
+  font-size: 16px;
+}
+.footer__text,
+.footer__callback,
+.footer__error,
+.footer__copyright,
+.footer .made-by {
+  color: #fff;
+  font-size: 16px;
+  line-height: 20px;
+}
+.footer__text span,
+.footer__callback span,
+.footer__error span,
+.footer__copyright span,
+.footer .made-by span {
+  position: relative;
+}
+.footer__text span:before,
+.footer__callback span:before,
+.footer__error span:before,
+.footer__copyright span:before,
+.footer .made-by span:before {
+  position: absolute;
+  content: '';
+  background: url(../../f/i/icons.png) -103px 0;
+  width: 70px;
+  height: 12px;
+  right: -75px;
+  bottom: 0;
+  top: 0;
+  margin: auto 0;
+}
+.footer__phone {
+  color: #fff;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: bold;
+  letter-spacing: .15em;
+}
+.footer__callback {
+  color: #ff3d32;
+  font-weight: bold;
+}
+.footer__copyright {
+  font-weight: bold;
 }
 .madeby {
   background: #fff;
@@ -3894,24 +3979,29 @@ textarea {
   line-height: 58px;
 }
 .header__menu {
+  max-width: 600px;
+  width: 100%;
+  float: right;
+}
+.header__menu ul {
   list-style: none;
   margin-bottom: 0;
   text-align: justify;
   padding-right: 10px;
 }
-.header__menu:after {
+.header__menu ul:after {
   display: inline-block;
   vertical-align: top;
   content: '';
   width: 100%;
 }
-.header__menu li {
+.header__menu ul li {
   display: inline-block;
   vertical-align: middle;
   line-height: 38px;
   max-height: 40px;
 }
-.header__menu li a {
+.header__menu ul li a {
   color: #fff;
   font-size: 16px;
   font-weight: bold;
@@ -3934,6 +4024,9 @@ textarea {
   letter-spacing: .01em;
   display: inline-block;
   vertical-align: middle;
+}
+.header__btn {
+  margin-left: 35px;
 }
 .city-switch {
   position: relative;
@@ -4074,4 +4167,232 @@ textarea {
   width: 88px;
   height: 61px;
   background: url(../../f/i/icons.png) -15px 0;
+}
+.preface {
+  height: 527px;
+  position: relative;
+  z-index: 1;
+  padding: 140px 0;
+}
+.preface img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -960px;
+  height: 100%;
+  z-index: -1;
+}
+.preface__title {
+  color: #fff;
+  display: inline-block;
+  vertical-align: text-bottom;
+  margin-left: -10px;
+  margin-right: 40px;
+}
+.preface__description {
+  font-weight: bold;
+  font-style: italic;
+  font-size: 18px;
+  color: #ff3d32;
+  display: inline-block;
+  vertical-align: text-bottom;
+}
+.works {
+  padding: 40px 0;
+}
+.works__item {
+  padding: 40px 30px 15px 40px;
+  background: #f1f1f1;
+}
+.works__icon {
+  height: 110px;
+  position: relative;
+  margin-bottom: 60px;
+}
+.works__icon img {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+}
+.works__title {
+  color: #090405;
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: bold;
+  letter-spacing: -0.025em;
+  margin-bottom: 20px;
+}
+.works ul {
+  list-style: none;
+}
+.works ul li {
+  line-height: 20px;
+  margin-bottom: 20px;
+}
+.works ul li a {
+  color: #090405;
+  font-size: 16px;
+  text-decoration: underline;
+}
+.conditions {
+  background: url(../../f/i/patterns/1.jpg) repeat;
+}
+.conditions__title,
+.conditions__text,
+.conditions__name {
+  color: #fff;
+}
+.conditions__description {
+  line-height: 20px;
+  color: #fff;
+}
+.conditions__item {
+  margin-bottom: 5px;
+}
+.conditions__title {
+  font-size: 36px;
+  line-height: 40px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: -5px 0 0 -5px;
+  margin-bottom: 50px;
+}
+.conditions__img {
+  height: 95px;
+  position: relative;
+  margin-bottom: 15px;
+}
+.conditions__img img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.conditions__name {
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.scheme {
+  min-height: 590px;
+  position: relative;
+}
+.scheme:before {
+  content: '';
+  position: absolute;
+  bottom: 160px;
+  right: 0;
+  height: 79px;
+  width: 100%;
+  background: url(../../f/i/patterns/2.png) center top repeat-x;
+}
+.scheme__title {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 40px;
+  text-transform: uppercase;
+  margin-bottom: 75px;
+}
+.scheme__holder {
+  position: relative;
+}
+.scheme__description {
+  line-height: 20px;
+  padding-top: 5px;
+}
+.scheme__item {
+  position: absolute;
+  text-align: center;
+}
+.scheme__item a {
+  color: #ff3d32;
+  text-decoration: underline;
+}
+.scheme__item:before {
+  content: '';
+  position: absolute;
+  background: #fff;
+  border: 3px solid #f1f1f1;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  bottom: -30px;
+}
+.scheme__item_1 {
+  left: -10px;
+}
+.scheme__item_5 {
+  right: 0;
+}
+.scheme__item_3,
+.scheme__item_2,
+.scheme__item_4 {
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.scheme__item_3 {
+  top: 78px;
+}
+.scheme__item_2,
+.scheme__item_4 {
+  top: 190px;
+}
+.scheme__item_2:before,
+.scheme__item_4:before {
+  bottom: auto;
+  top: -27px;
+}
+.scheme__item_2 {
+  left: 75px;
+}
+.scheme__item_4 {
+  right: 75px;
+}
+.scheme__num {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #f1f1f1;
+  font-size: 16px;
+  line-height: 48px;
+  margin-bottom: 15px;
+  display: inline-block;
+  vertical-align: top;
+  font-weight: bold;
+}
+.scheme__text {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: bold;
+}
+.callback {
+  background: #f1f1f1;
+  padding: 85px 0;
+}
+.callback__holder {
+  background: #fff;
+  padding: 35px;
+  text-align: center;
+}
+.callback__title {
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: bold;
+  margin-bottom: 35px;
+  letter-spacing: -0.025em;
+}
+.callback__inputs {
+  margin-left: -35px;
+}
+.callback .input {
+  width: 216px;
+  margin-left: 35px;
+}
+.callback__btn {
+  margin-left: 45px;
+  width: 216px;
 }
