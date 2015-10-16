@@ -4427,17 +4427,6 @@ textarea {
     position: relative;
     display: block;
     margin-bottom: 40px;
-  }
-  &__img {
-    overflow: hidden;
-    display: block;
-    position: relative;
-    text-align: center;
-    & img {
-      width: 100%;
-    }
-  }
-  &__link:hover {
     &:before,
     &:after {
       content: '';
@@ -4445,22 +4434,30 @@ textarea {
       top: 40px;
       right: 50%;
       margin-right: -97px;
-      height: 68px;
+      height: 0;
       width: 68px;
       background: url(../../f/i/icons.png) -173px 0;
       z-index: 2;
+      .transition(all, .3s, ease);
     }
     &:after {
       top: auto;
       bottom: 40px;
       left: 50%;
+      height: 68px;
+      width: 0;
       right: auto;
       margin-left: -97px;
       margin-right: 0;
     }
   }
-  &__link:hover &__img { 
+  &__img {
+    overflow: hidden;
+    display: block;
+    position: relative;
+    text-align: center;
     &:before {
+    	opacity: 0;
       position: absolute;
       left: 0;
       right: 0;
@@ -4468,9 +4465,24 @@ textarea {
       bottom: 0;
       margin: auto;
       background: #000;
-      opacity: .7;
       content: '';
+    	.transition(opacity, .3s, ease);
     }
+    & img {
+      width: 100%;
+    }
+  }
+  &__link:hover {
+    &:before,
+    &:after { 
+    	width: 68px;
+      height: 68px;
+    }
+  }
+  &__link:hover &__img { 
+  	&:before {
+  		opacity: .7;
+  	}
     &:after {
       content: 'Подробнее';
       display: block;
