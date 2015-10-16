@@ -4186,7 +4186,6 @@ textarea {
   color: #fff;
   display: inline-block;
   vertical-align: text-bottom;
-  margin-left: -10px;
   margin-right: 40px;
 }
 .preface__description {
@@ -4394,5 +4393,40 @@ textarea {
 }
 .callback__btn {
   margin-left: 45px;
+  width: 216px;
+}
+.projects__title {
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: bold;
+  margin-bottom: 35px;
+  letter-spacing: -0.025em;
+  text-transform: uppercase;
+  text-align: center;
+}
+.projects__item {
+  margin-bottom: 35px;
+}
+.projects__link {
+  background: #f2f2f3;
+  padding: 20px;
+  display: block;
+  margin-bottom: 40px;
+}
+.projects__img {
+  overflow: hidden;
+  display: block;
+}
+.projects__img img {
+  width: 100%;
+}
+.projects__text {
+  font: 14px/20px 'Open Sans', sans-serif;
+  letter-spacing: .025em;
+}
+.projects__more {
+  text-align: center;
+}
+.projects__more .btn {
   width: 216px;
 }
