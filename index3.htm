@@ -16,6 +16,7 @@
     <script src="f/js/jquery-1.11.3.min.js"></script>
     <script src="f/js/bootstrap.min.js"></script>
     <script src="f/js/bootstrap-multiselect.js"></script>
+    <script src="f/js/jquery.carouFredSel-6.2.1-packed.js"></script>
     <link rel="stylesheet" href="f/css/main.css">
     <link rel="stylesheet" href="f/css/bootstrap-multiselect.css">
     <script src="f/js/common.js"></script>
@@ -23,7 +24,17 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     <script>
       $(document).ready(function(){
-        
+        $('.card-slider__holder').carouFredSel({
+          responsive: true,
+          width: "100%",
+          next: ".card-slider__next",
+          prev: ".card-slider__prev",
+          scroll: {
+            duration: 450,
+            timeoutDuration: 9000,
+            fx: 'crossfade',
+          }
+        });
       });
     </script>
   </head>
@@ -80,49 +91,35 @@
         <div class="holder">
           <ul>
             <li><a href="#">Главная</a></li>
-            <li><span>Проекты</span></li>
+            <li><a href="#">Проекты</a></li>
+            <li><span>Ремонт кровли промышленного корпуса</span></li>
           </ul>
         </div>
       </section>
-      <section class="projects">
+      <section class="subsection card">
         <div class="holder">
-          <h1 class="projects__title">отремонтировано <i>и</i> сдано <br> более 300 объектов</h1>
-          <div class="half">
-            <div class="projects__item">
-              <a href="#" class="projects__link">
-                <span class="projects__img">
-                  <img src="f/i/projects/1.jpg" alt="">
-                </span> 
-              </a>
-              <p class="projects__text">Ремонт кровли спальных корпусов 1, 2, 3 <br> и клуба-столовой СОК «Русь»</p>
+          <h1 class="card__title">Ремонт кровли промышленного корпуса</h1>
+          <div class="card-slider">
+            <div class="card-slider__holder">
+              <div class="card-slider__item">
+                <img src="f/i/card-slider.jpg" alt="">
+              </div>
+              <div class="card-slider__item">
+                <img src="f/i/card-slider.jpg" alt="">
+              </div>
             </div>
-          </div><div class="half half_right">
-            <div class="projects__item">
-              <a href="#" class="projects__link">
-                <span class="projects__img">
-                  <img src="f/i/projects/2.jpg" alt="">
-                </span> 
-              </a>
-              <p class="projects__text">Гидроизоляция фундаментов Гостиницы у Арены</p>
-            </div>
-          </div><div class="half">
-            <div class="projects__item">
-              <a href="#" class="projects__link">
-                <span class="projects__img">
-                  <img src="f/i/projects/3.jpg" alt="">
-                </span> 
-              </a>
-              <p class="projects__text">Ремонт кровли Электромашинного производства</p>
-            </div>
-          </div><div class="half  half_right">
-            <div class="projects__item">
-              <a href="#" class="projects__link">
-                <span class="projects__img">
-                  <img src="f/i/projects/4.jpg" alt="">
-                </span> 
-              </a>
-              <p class="projects__text">Ремонт кровли над корпусом 1 (склад СГИ)</p>
-            </div>
+            <a href="#" class="card-slider__next"></a>
+            <a href="#" class="card-slider__prev"></a>
+          </div>
+          <div class="half card__text">
+            <p><span>Срок выполнения работ:</span> 05.06.2015</p>
+            <p><span>Место проведения работ:</span> г. Александров</p>
+            <p><span>Объем выполненных работ:</span> 8185 м2</p>
+            <p><span>Описание объекта:</span> Складское помещение</p>
+            <p><span>Цели выполнения работ:</span> Ремонт старой кровли</p>
+          </div><div class="half half_right card__text">
+            <p><span>Заказчик:</span> Таможенный брокер ЗАО «Альянс». Основным видом деятельности являются «Таможенные услуги / Организация мероприятий, таможенное оформление, склады».</p>
+            <p><span>Виды работ:</span> демонтаж старой кровли, монтаж профлиста, замена воронок внутреннего водостока, укладка нового гидроизоляционного слоя</p>
           </div>
         </div>
       </section>
@@ -138,94 +135,31 @@
           </div>
         </div>
       </section>
-      <section class="projects">
-        <div class="holder">
-          <div class="half">
-            <div class="projects__item">
-              <a href="#" class="projects__link">
-                <span class="projects__img">
-                  <img src="f/i/projects/5.jpg" alt="">
-                </span> 
-              </a>
-              <p class="projects__text">Ремонт кровли жилого дома №53 по ул. Ньютона</p>
+      <section class="subsection">
+        <div class="projects projects_main">
+          <div class="holder">
+            <p class="projects__title">Похожие проекты</p>
+            <div class="half">
+              <div class="projects__item">
+                <a href="#" class="projects__link">
+                  <span class="projects__img">
+                    <img src="f/i/projects/1.jpg" alt="">
+                  </span> 
+                </a>
+                <p class="projects__text">Ремонт кровли спальных корпусов 1, 2, 3 <br> и клуба-столовой СОК «Русь»</p>
+              </div>
+            </div><div class="half half_right">
+              <div class="projects__item">
+                <a href="#" class="projects__link">
+                  <span class="projects__img">
+                    <img src="f/i/projects/2.jpg" alt="">
+                  </span> 
+                </a>
+                <p class="projects__text">Гидроизоляция фундаментов Гостиницы у Арены</p>
+              </div>
             </div>
-          </div><div class="half  half_right">
-            <div class="projects__item">
-              <a href="#" class="projects__link">
-                <span class="projects__img">
-                  <img src="f/i/projects/6.jpg" alt="">
-                </span> 
-              </a>
-              <p class="projects__text">Ремонт кровли жилого дома №20 пос. Октябрьский</p>
-            </div>
-          </div><div class="half">
-            <div class="projects__item">
-              <a href="#" class="projects__link">
-                <span class="projects__img">
-                  <img src="f/i/projects/7.jpg" alt="">
-                </span> 
-              </a>
-              <p class="projects__text">Ремонт кровли цеха №18 Лит В-Н и цеха ЛВЖ</p>
-            </div>
-          </div><div class="half  half_right">
-            <div class="projects__item">
-              <a href="#" class="projects__link">
-                <span class="projects__img">
-                  <img src="f/i/projects/8.jpg" alt="">
-                </span> 
-              </a>
-              <p class="projects__text">Ремонт кровли цеха №2</p>
-            </div>
-          </div><div class="half">
-            <div class="projects__item">
-              <a href="#" class="projects__link">
-                <span class="projects__img">
-                  <img src="f/i/projects/9.jpg" alt="">
-                </span> 
-              </a>
-              <p class="projects__text">Ремонт кровли ТЦ «Чкаловский»</p>
-            </div>
-          </div><div class="half half_right">
-            <div class="projects__item">
-              <a href="#" class="projects__link">
-                <span class="projects__img">
-                  <img src="f/i/projects/10.jpg" alt="">
-                </span> 
-              </a>
-              <p class="projects__text">Ремонт кровли промышленного корпуса</p>
-            </div>
-          </div><div class="half">
-            <div class="projects__item">
-              <a href="#" class="projects__link">
-                <span class="projects__img">
-                  <img src="f/i/projects/11.jpg" alt="">
-                </span> 
-              </a>
-              <p class="projects__text">Ремонт кровли ТЦ «Хозяин»</p>
-            </div>
-          </div><div class="half half_right">
-            <div class="projects__item">
-              <a href="#" class="projects__link">
-                <span class="projects__img">
-                  <img src="f/i/projects/12.jpg" alt="">
-                </span> 
-              </a>
-              <p class="projects__text">Ремонт мягкой кровли жилого дома №51 к.3 по пр. Фрунзе</p>
-            </div>
+            <div class="projects__more"><a href="#" class="btn">Все проекты</a></div>
           </div>
-        </div>
-      </section>
-      <section class="pager">
-        <div class="holder">
-          <ul>
-            <li><span>1</span>
-            </li><li><a href="#">2</a>
-            </li><li><a href="#">3</a>
-            </li><li><a href="#">4</a>
-            </li><li><a href="#">5</a>
-            </li><li><p>...</p>
-            </li><li><a href="#">15</a></li>
-          </ul>
         </div>
       </section>
     </div>

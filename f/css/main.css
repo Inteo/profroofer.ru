@@ -3868,15 +3868,7 @@ textarea {
   position: relative;
   padding-right: 20px;
 }
-.half:nth-child(even) {
-  padding-right: 0;
-  padding-left: 20px;
-}
-.half_rev:nth-child(even) {
-  padding-right: 20px;
-  padding-left: 0;
-}
-.half_rev:nth-child(odd) {
+.half_right {
   padding-right: 0;
   padding-left: 20px;
 }
@@ -4517,4 +4509,69 @@ textarea {
   font-size: 12px;
   color: #090405;
   line-height: 18px;
+}
+.card__title {
+  font-size: 40px;
+  line-height: 46px;
+  margin-bottom: 35px;
+}
+.card__text {
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: -10px;
+}
+.card__text p {
+  margin-bottom: 20px;
+}
+.card__text p span {
+  color: #545454;
+}
+.card-slider {
+  padding: 40px;
+  background: #f1f1f1;
+  margin-bottom: 35px;
+  position: relative;
+}
+.card-slider__holder {
+  overflow: hidden;
+}
+.card-slider img {
+  width: 100%;
+}
+.card-slider__prev,
+.card-slider__next {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto 0;
+}
+.card-slider__prev:before,
+.card-slider__next:before {
+  position: absolute;
+  content: '';
+  width: 20px;
+  height: 16px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: url(../../f/i/icons.png) 0 -68px;
+}
+.card-slider__prev:hover:before,
+.card-slider__next:hover:before {
+  background-position: 0 -84px;
+}
+.card-slider__next {
+  left: auto;
+  right: 0;
+}
+.card-slider__next:before {
+  background-position: -20px -68px;
+}
+.card-slider__next:hover:before {
+  background-position: -20px -84px;
 }
