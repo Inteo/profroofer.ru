@@ -2021,40 +2021,41 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   border-bottom-right-radius: 3px;
 }
 .pager {
-  padding-left: 0;
-  margin: 30px 0 70px;
+  padding: 25px 0;
+  margin: 0;
   text-align: left;
   list-style: none;
+  background: #f1f1f1;
+  & ul {
+    margin-bottom: 0;
+    margin-left: -5px;
+  }
 }
 .pager li {
   display: inline-block;
+  vertical-align: top;
   text-align: center;
+  margin-left: 5px;
 }
 .pager li > a,
-.pager li > span {
+.pager li > span,
+.pager li > p {
   display: block;
-	width: 50px;
-	line-height: 46px;
-  background-color: #f5f5f5;
-  border: 2px solid #eceff1;
-  border-left: none;
-  /* color: @blue; */
-  font-weight: bold;
+	width: 43px;
+	line-height: 39px;
+  font-size: 16px;
+  background-color: #f1f1f1;
+  border: 2px solid transparent;
+  color: @black; 
 }
-.pager li:first-child > a,
-.pager li:first-child > span {
-	border-left: 2px solid #eceff1;
-	border-radius: 5px 0 0 5px;
+.pager li > span {
+  border-color: #e7e5e6;
 }
-.pager li:last-child > a,
-.pager li:last-child > span {
-	border-radius: 0 5px 5px 0;
-}
+
 .pager li > a:hover,
 .pager li > a:focus {
   text-decoration: none;
-  background-color: #fff;
-  /* color: @orange; */
+  border-color: #ff2020;
 }
 .pager .next > a,
 .pager .next > span {
@@ -4414,6 +4415,10 @@ textarea {
   }
 }
 .projects {
+  padding: 35px 0 0;
+  &_main {
+    padding: 0;
+  }
   &__title {
     font-size: 36px;
     line-height: 40px;
@@ -4429,14 +4434,69 @@ textarea {
   &__link {
     background: #f2f2f3;
     padding: 20px;
+    position: relative;
     display: block;
     margin-bottom: 40px;
   }
   &__img {
     overflow: hidden;
     display: block;
+    position: relative;
+    text-align: center;
     & img {
       width: 100%;
+    }
+  }
+  &__link:hover {
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: 40px;
+      right: 50%;
+      margin-right: -97px;
+      height: 68px;
+      width: 68px;
+      background: url(../../f/i/icons.png) -173px 0;
+      z-index: 2;
+    }
+    &:after {
+      top: auto;
+      bottom: 40px;
+      left: 50%;
+      right: auto;
+      margin-left: -97px;
+      margin-right: 0;
+    }
+  }
+  &__link:hover &__img { 
+    &:before {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      background: #000;
+      opacity: .7;
+      content: '';
+    }
+    &:after {
+      content: 'Подробнее';
+      display: block;
+      position: absolute;
+      text-align: center;
+      line-height: 40px;
+      font-weight: bold;
+      width: 216px;
+      height: 40px;
+      background: @orange;
+      color: #fff;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
     }
   }
   &__text {
@@ -4447,6 +4507,37 @@ textarea {
     text-align: center;
     & .btn {
       width: 216px;
+    }
+  }
+}
+.breadcrumbs {
+  background: #f1f1f1;
+  padding: 35px 0;
+  & ul {
+    list-style: none;
+    margin-bottom: 0;
+    & li {
+      display: inline-block;
+      vertical-align: top;
+      position: relative;
+      padding-left: 35px;
+      &:before {
+        position: absolute;
+        content: '/';
+        left: 13px;
+      }
+      &:first-child {
+        padding-left: 0;
+        &:before {
+          display: none;
+        }
+      }
+      & a,
+      & span {
+        font-size: 12px;
+        color: @black;
+        line-height: 18px;
+      }
     }
   }
 }
