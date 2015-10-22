@@ -330,11 +330,18 @@ h6 .small,
 }
 h1,
 .h1 {
-  font-size: 60px;
 }
 h2,
 .h2 {
-  font-size: 40px;
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: bold;
+  margin-bottom: 35px;
+  text-transform: uppercase;
+  letter-spacing: -.025em;
+}
+.text-center {
+  text-align: center;
 }
 h3,
 .h3 {
@@ -353,11 +360,10 @@ h6,
   font-size: 12px;
 }
 h1 {
-  font-size: 100px;
-  line-height: 80px;
-  color: @black;
-  letter-spacing: -.025em;
+  font-size: 40px;
+  line-height: 46px;
   font-weight: bold;
+  margin-bottom: 35px;
   text-transform: uppercase;
 }
 p {
@@ -4145,6 +4151,7 @@ textarea {
   display: inline-block;
   vertical-align: top;
   margin-top: -5px;
+  margin-bottom: 0;
   &:before {
     position: absolute;
     right: 0;
@@ -4155,9 +4162,11 @@ textarea {
     content: '';
   }
   & a {
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: none;
     & span {
-      font-size: 20px;
-      line-height: 24px;
+      
       display: inline-block;
       vertical-align: middle;
       position: relative;
@@ -4195,7 +4204,11 @@ textarea {
     display: inline-block;
     vertical-align: text-bottom;
     margin-right: 40px;
-
+    font-size: 100px;
+    line-height: 80px;
+    text-transform: uppercase;
+    letter-spacing: -.025em;
+    font-weight: bold;
   }
   &__description {
     font-weight: bold;
@@ -4258,10 +4271,7 @@ textarea {
     margin-bottom: 5px;
   }
   &__title {
-    font-size: 36px;
-    line-height: 40px;
-    text-transform: uppercase;
-    font-weight: bold;
+    text-align: left;
     margin: -5px 0 0 -5px;
     margin-bottom: 50px;
   }
@@ -4295,11 +4305,8 @@ textarea {
     background: url(../../f/i/patterns/2.png) center top repeat-x;
   }
   &__title {
-    font-weight: bold;
-    font-size: 36px;
-    line-height: 40px;
-    text-transform: uppercase;
     margin-bottom: 75px;
+    text-align: left;
   }
   &__holder {
     position: relative;
@@ -4408,15 +4415,6 @@ textarea {
   padding: 35px 0 0;
   &_main {
     padding: 0;
-  }
-  &__title {
-    font-size: 36px;
-    line-height: 40px;
-    font-weight: bold;
-    margin-bottom: 35px;
-    letter-spacing: -.025em;
-    text-transform: uppercase;
-    text-align: center;
   }
   &__item {
     margin-bottom: 35px;
@@ -4543,13 +4541,7 @@ textarea {
     }
   }
 }
-
 .card {
-  &__title {
-    font-size: 40px;
-    line-height: 46px;
-    margin-bottom: 35px;
-  }
   &__text {
     font-size: 16px;
     line-height: 20px;
@@ -4606,6 +4598,313 @@ textarea {
     }
     &:hover:before {
       background-position: -20px -84px;
+    }
+  }
+}
+.tech-scheme {
+  padding-top: 40px;
+  &__text {
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -.025em;
+    margin-bottom: 40px;
+  }
+  &__holder {
+    height: 450px;
+    position: relative;
+    & img {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 70px;
+      bottom: 0;
+      margin: auto;
+    }
+  }
+  &__label {
+    position: absolute;
+    font-size: 16px;
+    line-height: 20px;
+    z-index: 1;
+    & span {
+      display: inline-block;
+      & a {
+        color: @orange;
+        text-decoration: underline;
+      }
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background: #f1f1f1;
+      border-radius: 50%;
+      z-index: 2;
+    }
+    &:after {
+      position: absolute;
+      content: '';
+      width: 16px;
+      height: 16px;
+      background: #f1f1f1;
+      border-radius: 50%;
+      opacity: .45;
+      z-index: 1;
+    }
+    &_1 {
+      margin-right: 20px;
+      height: 178px;
+      top: 80px;
+    }
+    &_2 {
+      margin-right: 130px;
+      height: 73px;
+      top: 160px;
+    }
+    &_3 {
+      margin-left: 60px;
+      height: 138px;
+      top: 80px;
+    }
+    &_4 {
+      margin-left: 150px;
+      height: 89px;
+      top: 160px;
+    }
+    &_5 {
+      bottom: 85px;
+      height: 98px;
+      margin-right: 80px;
+    }
+    &_6 {
+      bottom: 10px;
+      height: 160px;
+      margin-right: -35px;
+    }
+    &_7 {
+      bottom: 45px;
+      height: 130px;
+      margin-left: 75px;
+    }
+    &_top {
+      & span {
+        margin-top: -3em;
+        vertical-align: top;
+      }
+      border-top: 1px solid #f1f1f1;
+      &:before {
+        bottom: -3px;
+      }
+      &:after {
+        bottom: -8px;
+      }
+    }
+    &_bottom {
+      border-bottom: 1px solid #f1f1f1;
+      & i {
+        display: inline-block;
+        vertical-align: top;
+        height: 100%;
+      }
+      & span {
+        vertical-align: bottom;
+        padding: 0 10px 7px 0;
+      }
+      &:before {
+        top: -3px;
+      }
+      &:after {
+        top: -8px;
+      }
+    }
+    &_bottom&_right {
+      & span {
+        padding-right: 0;
+        padding-left: 10px;
+      }
+    }
+    &_left {
+      right: 50%;
+      border-right: 1px solid #f1f1f1;
+      &:before {
+        right: -3px;
+      }
+      &:after {
+        right: -8px;
+      }
+    }
+    &_right {
+      left: 50%;
+      border-left: 1px solid #f1f1f1;
+      &:before {
+        left: -3px;
+      }
+      &:after {
+        left: -8px;
+      }
+    }
+  }
+}
+.applying {
+  background: url(../../f/i/patterns/2.jpg) repeat;
+  position: relative;
+  padding-bottom: 80px;
+  &:before {
+    position: absolute;
+    content: '';
+    right: 0;
+    top: 0;
+    background: url(../../f/i/applying.jpg) no-repeat;
+    background-size: 100% 100%;
+    height: 100%;
+    width: 1280px;
+  }
+  &__title {
+    margin-bottom: 40px;
+  }
+  &__text {
+    font-size: 16px;
+    line-height: 20px;
+    max-width: 70%;
+  }
+}
+.advant {
+  &__holder {
+    margin-left: -50px;
+  }
+  &__item {
+    width: 33.333333%;
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 50px;
+    margin-bottom: 10px;
+  }
+  &__img {
+    display: block;
+    position: relative;
+    height: 101px;
+    & img {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+  &__name {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: bold;
+    margin-top: -10px;
+    margin-bottom: 20px;
+  }
+  &__text {
+    color: #4f4f4f;
+  }
+}
+.features {
+  background: #000 url("../../f/i/patterns/1.jpg") repeat;
+  &__title {
+    color: #fff;
+    margin-bottom: 25px;
+  }
+  &__holder {
+    margin-left: -100px;
+    margin-bottom: -10px;
+  }
+  &__col {
+    display: inline-block;
+    vertical-align: top;
+    width: 33.333333%;
+    margin-bottom: 55px;
+    padding-left: 100px;
+  }
+  &__subtitle {
+    font-size: 16px;
+    line-height: 20px;
+    color: #fff;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  &__text {
+    color: #fff;
+  }
+}
+.assembly {
+  &__text {
+    line-height: 20px;
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+  &__holder {
+    text-align: justify;
+    margin-bottom: -5px;
+    &:after {
+      display: inline-block;
+      vertical-align: top;
+      content: '';
+      width: 100%;
+    }
+  }
+  &__item {
+    display: inline-block;
+    vertical-align: top;
+    width: 256px;
+  }
+  &__img {
+    width: 256px;
+    height: 164px;
+    background: #f3f1f1;
+    position: relative;
+    margin-bottom: 15px;
+    & img {
+      position: absolute;
+      left: 20px;
+      right: 20px;
+      top: 20px;
+      bottom: 20px;
+      margin: auto;
+    }
+  }
+  &__subtitle {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 20px;
+  }
+  &__description {
+    color: #4f4f4f;
+  }
+}
+.complex {
+  background: #f1f1f1;
+  &__text {
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 35px;
+  }
+  &__holder {
+    margin-right: -40px;
+  }
+  &__item {
+    padding-left: 35px;
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+    padding-right: 40px;
+    position: relative;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    &:before {
+      content: '';
+      position: absolute;
+      top: .5em;
+      left: 0;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: @orange;
     }
   }
 }
