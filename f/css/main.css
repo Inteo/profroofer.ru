@@ -4868,10 +4868,6 @@ textarea {
 }
 .complex__item {
   padding-left: 35px;
-  width: 50%;
-  display: inline-block;
-  vertical-align: top;
-  padding-right: 40px;
   position: relative;
   font-size: 16px;
   line-height: 20px;
@@ -4887,4 +4883,49 @@ textarea {
   height: 5px;
   border-radius: 50%;
   background: #ff3d32;
+}
+.goods__name {
+  font-size: 36px;
+  line-height: 20px;
+  color: #ff3d32;
+  letter-spacing: .025em;
+  margin-bottom: 45px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.goods__img {
+  width: 472px;
+  height: 304px;
+  background: #f3f1f2;
+  position: relative;
+  margin-bottom: 30px;
+}
+.goods__img img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  max-width: 50%;
+  max-height: 50%;
+}
+.goods__info {
+  display: table;
+  width: 100%;
+}
+.goods__line {
+  line-height: 30px;
+  letter-spacing: .025em;
+  display: table-row;
+  width: 100%;
+}
+.goods__line span {
+  display: table-cell;
+}
+.goods__line span:first-child {
+  padding-right: 40px;
+}
+.goods__line span:last-child {
+  min-width: 80px;
 }
